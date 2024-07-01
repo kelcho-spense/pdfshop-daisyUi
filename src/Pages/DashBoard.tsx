@@ -1,10 +1,10 @@
-import { ScrollRestoration } from "react-router-dom";
-export function DashBoard() {
+import Layout from "../dashboard/Layout";
+
+
+export default function DashBoard() {
   return (
     <div>DashBoard
-
-
-        <ScrollRestoration />
+      <Layout />
     </div>
   )
 }

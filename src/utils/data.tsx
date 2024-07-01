@@ -1,53 +1,56 @@
-import { FaceSmileIcon, ChartBarSquareIcon, CursorArrowRaysIcon, DevicePhoneMobileIcon, AdjustmentsHorizontalIcon, SunIcon, } from "@heroicons/react/24/solid";
+import {  DevicePhoneMobileIcon, AdjustmentsHorizontalIcon, SunIcon, } from "@heroicons/react/24/solid";
+import { SearchCode } from 'lucide-react';
 
 import benefitOneImg from "../assets/benefit-one.png";
 import benefitTwoImg from "../assets/benefit-two.png";
+import { BookOpenIcon, FolderOpenIcon } from "lucide-react";
 
 const benefitOne = {
-  title: "Highlight your benefits",
-  desc: "You can use this space to highlight your first benefit or a feature of your product. It can also contain an image or Illustration like in the example along with some bullet points.",
+  title: "Discover the Power of Digital Reading",
+  desc: "Our platform offers a seamless and enjoyable experience for reading PDFs. Explore our features designed to enhance your reading experience, all in one place.",
   image: benefitOneImg,
   bullets: [
     {
-      title: "Understand your customers",
-      desc: "Then explain the first point breifly in one or two lines.",
-      icon: <FaceSmileIcon />,
+      title: "Seamless Access to Documents",
+      desc: "Easily access a wide range of PDFs from various categories with just a few clicks.",
+      icon: <SearchCode />,
     },
     {
-      title: "Improve acquisition",
-      desc: "Here you can add the next benefit point.",
-      icon: <ChartBarSquareIcon />,
+      title: "Enhanced Reading Experience",
+      desc: "Enjoy a user-friendly interface with features like zoom, search, and bookmarks to enhance your reading experience.",
+      icon: <BookOpenIcon />,
     },
     {
-      title: "Drive customer retention",
-      desc: "This will be your last bullet point in this section.",
-      icon: <CursorArrowRaysIcon />,
+      title: "Stay Organized",
+      desc: "Organize your documents in personalized folders, making it easier to find and manage your reading materials.",
+      icon: <FolderOpenIcon />,
     },
   ],
 };
 
 const benefitTwo = {
-  title: "Offer more benefits here",
-  desc: "You can use this same layout with a flip image to highlight your rest of the benefits of your product. It can also contain an image or Illustration as above section along with some bullet points.",
+  title: "Enhance Your Digital Library Experience",
+  desc: "Explore additional features that make our platform unique and user-friendly. Enjoy a personalized and efficient reading experience with these advanced functionalities.",
   image: benefitTwoImg,
   bullets: [
     {
-      title: "Mobile Responsive Template",
-      desc: "Nextly is designed as a mobile first responsive template.",
+      title: "Mobile-Friendly Design",
+      desc: "Access and read your PDFs on any device with our responsive design.",
       icon: <DevicePhoneMobileIcon />,
     },
     {
-      title: "Powered by Next.js & TailwindCSS",
-      desc: "This template is powered by latest technologies and tools.",
-      icon: <AdjustmentsHorizontalIcon />,
+      title: "Advanced Search and Filter",
+      desc: "Quickly find the documents you need with our powerful search and filter tools.",
+      icon: <SearchCode />,
     },
     {
-      title: "Dark & Light Mode",
-      desc: "Nextly comes with a zero-config light & dark mode. ",
+      title: "Personalized Reading Settings",
+      desc: "Switch between dark and light modes for a comfortable reading experience anytime.",
       icon: <SunIcon />,
     },
   ],
 };
+
 
 
 export { benefitOne, benefitTwo };

@@ -1,13 +1,14 @@
 import loginPic from '../assets/login.png';
 import { Key } from 'lucide-react';
+import { NavLink } from "react-router-dom";
 
-export function Login() {
+export default  function Login() {
     return (
         <div className="grid sm:grid-cols-2 gap-1 h-screen">
             <div className="flex items-center justify-center sm:order-first m-5 p-6">
                 <form className="card gap-3 place-items-center p-6 rounded-box">
                     <div className="chat chat-end p-3">
-                        <div className="chat-bubble text-4xl m-3 ">Login</div>
+                        <div className="chat-bubble text-4xl m-3 ">Admin Login</div>
                     </div>
                     <label className="input input-bordered flex items-center gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-5 h-5 opacity-70">
@@ -22,10 +23,14 @@ export function Login() {
                         </svg>
                         <input type="password" className="grow" placeholder="Password" />
                     </label>
-                    <label className="input input-bordered flex items-center gap-2">
+                    <label className="flex place-items-center  w-[50%] btn btn-outline btn-accent">
                         <Key color='green' size={30} />
-                        <input className="w-full text-sky-400 " type="submit" value="login" />
+                        <input type="submit" className='text-xl' value="login" />
                     </label>
+                    <NavLink to="/"
+                        className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "active" : ""
+                        }>🏡Go to Homepage?
+                    </NavLink>
                 </form>
             </div>
             <div className="flex items-center justify-center sm:h-full md:h-screen bg-base-300 p-6">
