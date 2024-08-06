@@ -13,7 +13,7 @@ const HomePage = () => {
   // }
   const user = null
   return (
-    <Contaainer className="bg-base-200 flex flex-col gap-6">
+    <Container className="bg-base-200 flex flex-col gap-6">
       <Navbar user={user} />
       <Hero />
       <Companies />

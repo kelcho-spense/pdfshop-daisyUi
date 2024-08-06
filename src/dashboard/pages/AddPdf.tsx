@@ -1,12 +1,5 @@
 import { useState } from 'react';
 import { Upload } from 'lucide-react';
-import Modal from 'react-modal';
-import { Document, Page, pdfjs } from 'react-pdf';
-import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
-import 'react-pdf/dist/esm/Page/TextLayer.css';
-
-// Set the worker path for PDF.js
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 function AddPdf() {
   const [file, setFile] = useState(null);
@@ -64,13 +57,7 @@ function AddPdf() {
           </form>
         </div>
       </div>
-      <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={() => setModalIsOpen(false)}
-        contentLabel="PDF Preview"
-        className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75"
-        overlayClassName="fixed inset-0 bg-black bg-opacity-50"
-      >
+    
         <div className="bg-white rounded-lg p-4 w-3/4 h-3/4 overflow-auto">
           <button
             onClick={() => setModalIsOpen(false)}
@@ -80,12 +67,7 @@ function AddPdf() {
           </button>
           {file && (
             <div className="pdf-viewer">
-              <Document
-                file={URL.createObjectURL(file)}
-                onLoadSuccess={onDocumentLoadSuccess}
-              >
-                <Page pageNumber={pageNumber} />
-              </Document>
+              
               <p>
                 Page {pageNumber} of {numPages}
               </p>
@@ -110,7 +92,6 @@ function AddPdf() {
             </div>
           )}
         </div>
-      </Modal>
     </div>
   );
 }
